@@ -45,7 +45,12 @@ var upload = multer({
     callback(null, true)
   }
 });
-app.use(cors());
+let corsOptions = {
+  origin: ["http://localhost:3000", "http://localhost:3001/", "http://localhost:3001" , "http://localhost:3000/" , "https://ronan-fashion-back.onrender.com" , "https://ronan-fashion-back.onrender.com/"],
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.static('uploads'));
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
