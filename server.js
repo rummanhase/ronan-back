@@ -12,7 +12,7 @@ var product = require("./model/product.js");
 var user = require("./model/user.js");
 require('dotenv').config();
 
-const connectionString = process.env.MongoURI;
+const connectionString = "mongodb+srv://rummanhase:dh8VhWmz5UzXzPBo@cluster0.reh4nzx.mongodb.net/productDB";
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
