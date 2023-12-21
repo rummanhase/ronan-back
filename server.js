@@ -46,12 +46,12 @@ var upload = multer({
   }
 });
 let corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:3001/", "http://localhost:3001" , "http://localhost:3000/" , "https://ronan-fashion-back.onrender.com" , "https://ronan-fashion-back.onrender.com/"],
+  origin: ["http://localhost:3000", "http://localhost:3001" , "https://ronan-fashion-back.onrender.com" ];
 };
 
 const app = express();
 app.use(cors({
-        origin: "https://ronan-fashion-back.onrender.com"
+        origin: corsOptions.origin;
     }
 ))
 app.options('*', cors())
